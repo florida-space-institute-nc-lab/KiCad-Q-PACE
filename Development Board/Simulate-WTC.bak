@@ -1,11 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:QPACE-DevelopmentBoard-cache
-LIBS:WTC-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 9
 Title ""
 Date ""
 Rev ""
@@ -186,9 +185,11 @@ NoConn ~ 4700 6400
 Text Label 3100 2000 2    50   ~ 0
 BOOT0
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C997057
 P 1700 2800
+AR Path="/5C997057" Ref="R?"  Part="1" 
+AR Path="/5C7F8729/5C997057" Ref="R?"  Part="1" 
 F 0 "R?" V 1907 2800 50  0000 C CNN
 F 1 "100k" V 1816 2800 50  0000 C CNN
 F 2 "" V 1630 2800 50  0001 C CNN
@@ -197,9 +198,11 @@ F 3 "~" H 1700 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:GS3 J?
+L QPACE-DevelopmentBoard-rescue:GS3-conn J?
 U 1 1 5C9970FC
 P 1400 2800
+AR Path="/5C9970FC" Ref="J?"  Part="1" 
+AR Path="/5C7F8729/5C9970FC" Ref="J?"  Part="1" 
 F 0 "J?" H 1400 3105 50  0000 C CNN
 F 1 "GS3" H 1400 3014 50  0000 C CNN
 F 2 "Connectors:GS3" V 1488 2726 50  0001 C CNN
@@ -208,9 +211,11 @@ F 3 "" H 1400 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C9971B9
 P 1700 3300
+AR Path="/5C9971B9" Ref="R?"  Part="1" 
+AR Path="/5C7F8729/5C9971B9" Ref="R?"  Part="1" 
 F 0 "R?" V 1907 3300 50  0000 C CNN
 F 1 "100k" V 1816 3300 50  0000 C CNN
 F 2 "" V 1630 3300 50  0001 C CNN
@@ -219,9 +224,11 @@ F 3 "~" H 1700 3300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conn:GS3 J?
+L QPACE-DevelopmentBoard-rescue:GS3-conn J?
 U 1 1 5C9971DB
 P 1400 3300
+AR Path="/5C9971DB" Ref="J?"  Part="1" 
+AR Path="/5C7F8729/5C9971DB" Ref="J?"  Part="1" 
 F 0 "J?" H 1400 3605 50  0000 C CNN
 F 1 "GS3" H 1400 3514 50  0000 C CNN
 F 2 "Connectors:GS3" V 1488 3226 50  0001 C CNN
@@ -293,4 +300,34 @@ Text Label 3100 6100 2    50   ~ 0
 UART_RX
 Text Label 3100 6000 2    50   ~ 0
 UART_TX
+Text Label 3100 5000 2    50   ~ 0
+EN_Kill_Switch-2
+Text Label 3100 4900 2    50   ~ 0
+EN_Kill_Switch-1
+Text Label 3100 4700 2    50   ~ 0
+EN_Deploy-1
+Text Label 3100 4600 2    50   ~ 0
+EN_Deploy-2
+NoConn ~ 3100 4500
+NoConn ~ 3100 4400
+Text HLabel 9000 1700 2    50   Input ~ 0
+SWCLK
+Text HLabel 9000 1800 2    50   Input ~ 0
+SWDIO
+Text HLabel 9000 1900 2    50   Input ~ 0
+NRST
+Text HLabel 9000 2000 2    50   Input ~ 0
+SWO
+Text HLabel 9000 2150 2    50   Input ~ 0
+RF_UART_TX
+Text HLabel 9000 2250 2    50   Input ~ 0
+RF_UART_RX
+Text HLabel 9000 2350 2    50   Input ~ 0
+CCDR_UART_RX
+Text HLabel 9000 2450 2    50   Input ~ 0
+CCDR_UART_RX
+Text HLabel 9000 2800 2    50   Input ~ 0
+I2C_SDA
+Text HLabel 9000 2900 2    50   Input ~ 0
+I2C_SCK
 $EndSCHEMATC
