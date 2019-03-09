@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 9
+Sheet 2 10
 Title ""
 Date ""
 Rev ""
@@ -539,9 +539,9 @@ Wire Wire Line
 Wire Wire Line
 	2050 5800 2150 5800
 Text HLabel 10200 5250 0    50   Input ~ 0
-USB_D+
+COM_TX
 Text HLabel 10200 5350 0    50   Input ~ 0
-USB_D-
+COM_RX
 Text HLabel 10200 5500 0    50   Input ~ 0
 UART_TX
 Text HLabel 10200 5600 0    50   Input ~ 0

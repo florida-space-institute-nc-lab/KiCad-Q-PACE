@@ -325,7 +325,7 @@ RF_UART_RX
 Text HLabel 9000 2350 2    50   Input ~ 0
 CCDR_UART_RX
 Text HLabel 9000 2450 2    50   Input ~ 0
-CCDR_UART_RX
+CCDR_UART_TX
 Text HLabel 9000 2800 2    50   Input ~ 0
 I2C_SDA
 Text HLabel 9000 2900 2    50   Input ~ 0
