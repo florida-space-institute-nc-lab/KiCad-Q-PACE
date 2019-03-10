@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 10
+Sheet 1 12
 Title "Raspberry Pi HAT"
 Date ""
 Rev "A"
@@ -85,32 +85,6 @@ NoConn ~ 750  3000
 NoConn ~ 1150 2800
 Text Label 1150 2400 0    50   ~ 0
 USB_5V
-Wire Wire Line
-	1150 2400 1500 2400
-$Comp
-L Device:Polyfuse F?
-U 1 1 5C955A1A
-P 1650 2400
-F 0 "F?" V 1550 2350 50  0000 C CNN
-F 1 "Polyfuse" V 1750 2350 50  0000 C CNN
-F 2 "" H 1700 2200 50  0001 L CNN
-F 3 "~" H 1650 2400 50  0001 C CNN
-	1    1650 2400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Schottky D?
-U 1 1 5C955B19
-P 2050 2400
-F 0 "D?" H 2050 2184 50  0000 C CNN
-F 1 "D_Schottky" H 2050 2275 50  0000 C CNN
-F 2 "" H 2050 2400 50  0001 C CNN
-F 3 "~" H 2050 2400 50  0001 C CNN
-	1    2050 2400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1900 2400 1800 2400
 Text Label 1150 2600 0    50   ~ 0
 USB_D+
 Text Label 1150 2700 0    50   ~ 0
@@ -295,13 +269,13 @@ F4 "UART_TX" I R 6700 3700 50
 F5 "UART_RX" I R 6700 3800 50 
 $EndSheet
 Wire Wire Line
-	10800 800  10800 4100
+	10100 800  10100 4100
 Wire Wire Line
-	10900 4200 9800 4200
+	10200 4200 9800 4200
 Wire Wire Line
-	10900 700  10900 4200
+	10200 700  10200 4200
 Wire Wire Line
-	9800 4100 10800 4100
+	9800 4100 10100 4100
 $Comp
 L conn:Conn_01x04 J?
 U 1 1 5C8563BD
@@ -461,114 +435,13 @@ Wire Wire Line
 Text Notes 6400 2600 0    50   ~ 0
 simluate RF
 Wire Wire Line
-	2800 700  10900 700 
+	2800 700  10200 700 
 Wire Wire Line
-	2900 800  10800 800 
+	2900 800  10100 800 
 Wire Wire Line
 	3000 900  9950 900 
 Wire Wire Line
 	3100 1000 9850 1000
-$Comp
-L conn:Conn_02x20_Odd_Even J?
-U 1 1 5C8E5364
-P 1600 6500
-F 0 "J?" H 1650 7617 50  0000 C CNN
-F 1 "Avionics Stack Connector" H 1650 7526 50  0000 C CNN
-F 2 "" H 1600 6500 50  0001 C CNN
-F 3 "~" H 1600 6500 50  0001 C CNN
-	1    1600 6500
-	1    0    0    -1  
-$EndComp
-Text Label 1400 5600 2    50   ~ 0
-UART_TX_Pi2
-Text Label 1400 5700 2    50   ~ 0
-UART_RX_Pi2
-Text Label 1400 5800 2    50   ~ 0
-UART_TX_Pi1
-Text Label 1400 5900 2    50   ~ 0
-UART_RX_Pi1
-Text Label 1400 6000 2    50   ~ 0
-Pi1_GPIO
-Text Label 1400 6100 2    50   ~ 0
-I2C_SDA
-Text Label 1400 6200 2    50   ~ 0
-I2C_SCL
-Text Label 1400 6400 2    50   ~ 0
-EN_12V-1
-Text Label 1900 7500 0    50   ~ 0
-3V3_Rail
-Text Label 1900 7200 0    50   ~ 0
-Vbat
-Text Label 1900 7100 0    50   ~ 0
-Vbat
-Text Label 1400 7100 2    50   ~ 0
-Vbat
-Text Label 1400 7200 2    50   ~ 0
-Vbat
-Text Label 1400 7500 2    50   ~ 0
-5V_Rail
-Wire Wire Line
-	1400 7500 1400 7400
-Connection ~ 1400 7400
-Wire Wire Line
-	1400 7400 1400 7300
-Wire Wire Line
-	1900 7400 1900 7500
-Text Label 1900 7000 0    50   ~ 0
-EN_5V-2
-Text Label 1400 7000 2    50   ~ 0
-EN_5V-1
-NoConn ~ 1900 6900
-NoConn ~ 1400 6900
-$Comp
-L power:GND #PWR?
-U 1 1 5C8EFA47
-P 1900 6700
-F 0 "#PWR?" H 1900 6450 50  0001 C CNN
-F 1 "GND" V 1905 6572 50  0000 R CNN
-F 2 "" H 1900 6700 50  0001 C CNN
-F 3 "" H 1900 6700 50  0001 C CNN
-	1    1900 6700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C8EFA95
-P 1400 6700
-F 0 "#PWR?" H 1400 6450 50  0001 C CNN
-F 1 "GND" V 1405 6572 50  0000 R CNN
-F 2 "" H 1400 6700 50  0001 C CNN
-F 3 "" H 1400 6700 50  0001 C CNN
-	1    1400 6700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1900 6600 1900 6700
-Connection ~ 1900 6700
-Wire Wire Line
-	1900 6700 1900 6800
-Wire Wire Line
-	1400 6600 1400 6700
-Connection ~ 1400 6700
-Wire Wire Line
-	1400 6700 1400 6800
-Text Label 1900 6400 0    50   ~ 0
-EN_12V-2
-Text Label 1900 5700 0    50   ~ 0
-Pi2_GPIO
-Text Label 1900 5800 0    50   ~ 0
-EN_Pi1_Pwr
-Text Label 1900 5900 0    50   ~ 0
-EN_Pi2_Pwr
-NoConn ~ 1900 6000
-NoConn ~ 1900 6100
-NoConn ~ 1900 6200
-NoConn ~ 1900 6300
-Text Label 1400 6300 2    50   ~ 0
-12V_Rail
-NoConn ~ 1900 7300
-Text Label 1900 5600 0    50   ~ 0
-EN_Pi_Mux
 $Comp
 L conn:Conn_01x02 J?
 U 1 1 5C906926
@@ -584,80 +457,6 @@ Text Label 1650 4500 2    50   ~ 0
 I2C_SDA
 Text Label 1650 4600 2    50   ~ 0
 I2C_SCL
-$Comp
-L conn:Conn_02x12_Odd_Even J?
-U 1 1 5C9104EC
-P 3700 6550
-F 0 "J?" H 3750 7267 50  0000 C CNN
-F 1 "CCDR-ECR Connector" H 3750 7176 50  0000 C CNN
-F 2 "" H 3700 6550 50  0001 C CNN
-F 3 "~" H 3700 6550 50  0001 C CNN
-	1    3700 6550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C910592
-P 3500 6050
-F 0 "#PWR?" H 3500 5800 50  0001 C CNN
-F 1 "GND" V 3505 5922 50  0000 R CNN
-F 2 "" H 3500 6050 50  0001 C CNN
-F 3 "" H 3500 6050 50  0001 C CNN
-	1    3500 6050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3500 6050 3500 6150
-Connection ~ 3500 6150
-Wire Wire Line
-	3500 6150 3500 6250
-Connection ~ 3500 6250
-Wire Wire Line
-	3500 6250 3500 6350
-Connection ~ 3500 6050
-Wire Wire Line
-	4000 6050 4000 6150
-Connection ~ 4000 6150
-Wire Wire Line
-	4000 6150 4000 6250
-Connection ~ 4000 6250
-Wire Wire Line
-	4000 6250 4000 6350
-$Comp
-L power:GND #PWR?
-U 1 1 5C914FC2
-P 4000 6050
-F 0 "#PWR?" H 4000 5800 50  0001 C CNN
-F 1 "GND" V 4005 5922 50  0000 R CNN
-F 2 "" H 4000 6050 50  0001 C CNN
-F 3 "" H 4000 6050 50  0001 C CNN
-	1    4000 6050
-	0    -1   -1   0   
-$EndComp
-Connection ~ 4000 6050
-Text Label 3500 6450 2    50   ~ 0
-EN_Solenoid2
-Text Label 3500 6550 2    50   ~ 0
-EN_Stepper
-Text Label 3500 6650 2    50   ~ 0
-EN_Stepper_A
-Text Label 3500 6750 2    50   ~ 0
-EN_Stepper_B
-NoConn ~ 3500 6850
-NoConn ~ 3500 6950
-NoConn ~ 3500 7050
-NoConn ~ 3500 7150
-NoConn ~ 4000 7150
-NoConn ~ 4000 7050
-NoConn ~ 4000 6950
-NoConn ~ 4000 6850
-NoConn ~ 4000 6750
-Text Label 4000 6450 0    50   ~ 0
-EN_Solenoid3
-Text Label 4000 6550 0    50   ~ 0
-EN_Solenoid1
-Text Label 4000 6650 0    50   ~ 0
-EN_LED
 $Comp
 L QPACE-SchematicSymbols:BMG160 U?
 U 1 1 5C9512C9
@@ -835,8 +634,6 @@ Wire Wire Line
 	1150 2600 2650 2600
 Wire Wire Line
 	2600 1550 2600 2400
-Wire Wire Line
-	2600 2400 2200 2400
 $Comp
 L device:LED_Dual_AACC D?
 U 1 1 5CA5B50D
@@ -909,10 +706,6 @@ Wire Wire Line
 Connection ~ 5300 1900
 Wire Wire Line
 	5300 1900 4250 1900
-Text Notes 900  5100 0    50   ~ 0
-Use the "Avionics Stack Connector" to attach \nto the engineering model to test functionality
-Text Notes 3050 5700 0    50   ~ 0
-Use the "CCDR-ECR Connector" to attach \nto the Experiment Control/Regulator board \nto test ETC (experiment test cell) functionality
 Wire Wire Line
 	2150 3600 2350 3600
 Wire Wire Line
@@ -1046,4 +839,22 @@ F 3 "" H 5200 5400 50  0001 C CNN
 $EndComp
 Text Notes 5750 4350 0    50   ~ 0
 recommend using one of these \nports to connect an ethernet-USB \nconverter from Pi to this port.
+$Sheet
+S 10300 750  500  450 
+U 5C86F6E8
+F0 "QPACE_DevBoard-R0" 50
+F1 "QPACE_DevBoard-R0.sch" 50
+$EndSheet
+Text Notes 4100 4000 0    50   ~ 0
+Pi ethernet 2 USB adp.
+$Sheet
+S 2650 5600 800  650 
+U 5C872C63
+F0 "Simulate-StackIntegration" 50
+F1 "Simulate-StackIntegration.sch" 50
+$EndSheet
+Wire Wire Line
+	1150 2400 2600 2400
+Text Notes 5700 4950 0    50   ~ 0
+extra USB\n
 $EndSCHEMATC

@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 10
+Sheet 3 12
 Title ""
 Date ""
 Rev ""
@@ -121,8 +121,6 @@ NoConn ~ 4700 6500
 NoConn ~ 4700 5900
 NoConn ~ 4700 5800
 NoConn ~ 4700 5700
-Text Label 4700 1900 0    50   ~ 0
-ADC_V_MPPT
 Text Label 4700 2000 0    50   ~ 0
 UART_TX_RF
 Text Label 4700 2100 0    50   ~ 0
@@ -134,49 +132,19 @@ Text Label 4700 2700 0    50   ~ 0
 UART_TX_Pi
 Text Label 4700 2800 0    50   ~ 0
 UART_RX_Pi
-Text Label 4700 3000 0    50   ~ 0
-EN_5V-1
 Text Label 4700 3100 0    50   ~ 0
 SWD_SWDIO
 Text Label 4700 3200 0    50   ~ 0
 SWD_SWCLK
 NoConn ~ 4700 3300
-Text Label 4700 3500 0    50   ~ 0
-ADC_I_3.3V-2
-Text Label 4700 3600 0    50   ~ 0
-ADC_I_3.3V-1
 Text Label 4700 3700 0    50   ~ 0
 BOOT1
 Text Label 4700 3800 0    50   ~ 0
 SWD_SWO
-Text Label 4700 3900 0    50   ~ 0
-EN_MPPT_XZ-
-Text Label 4700 4000 0    50   ~ 0
-EN_MPPT_XC
-Text Label 4700 4100 0    50   ~ 0
-EN_MPPT_XZ+
-Text Label 4700 4200 0    50   ~ 0
-EN_NTC_Drive
-Text Label 4700 4300 0    50   ~ 0
-EN_Deployment_Power
-Text Label 4700 4400 0    50   ~ 0
-EN_UHF_Power
 Text Label 4700 4500 0    50   ~ 0
 I2C_SCL
 Text Label 4700 4600 0    50   ~ 0
 I2C_SDA
-Text Label 4700 4700 0    50   ~ 0
-ADC_V_Battery_Stack-1
-Text Label 4700 4800 0    50   ~ 0
-ADC_V_Battery_Stack-3
-Text Label 4700 4900 0    50   ~ 0
-ADC_V_Battery_Stack-2
-Text Label 4700 5000 0    50   ~ 0
-ADC_V_Battery_Stack-4
-Text Label 4700 6000 0    50   ~ 0
-EN_12V-1
-Text Label 4700 6100 0    50   ~ 0
-EN_12V-2
 Text Label 4700 6200 0    50   ~ 0
 UART_TX_2
 Text Label 4700 6300 0    50   ~ 0
@@ -288,26 +256,10 @@ NoConn ~ 3100 5800
 NoConn ~ 3100 5900
 Text Label 3100 6700 2    50   ~ 0
 IO_Pi1
-Text Label 3100 6600 2    50   ~ 0
-IO_Pi2
-Text Label 3100 6500 2    50   ~ 0
-O_SwitchAccess_Pi
-Text Label 3100 6400 2    50   ~ 0
-EN_Pi2_Power
-Text Label 3100 6300 2    50   ~ 0
-EN_Pi1_Power
 Text Label 3100 6100 2    50   ~ 0
 UART_RX
 Text Label 3100 6000 2    50   ~ 0
 UART_TX
-Text Label 3100 5000 2    50   ~ 0
-EN_Kill_Switch-2
-Text Label 3100 4900 2    50   ~ 0
-EN_Kill_Switch-1
-Text Label 3100 4700 2    50   ~ 0
-EN_Deploy-1
-Text Label 3100 4600 2    50   ~ 0
-EN_Deploy-2
 NoConn ~ 3100 4500
 NoConn ~ 3100 4400
 Text HLabel 9000 1700 2    50   Input ~ 0
@@ -330,4 +282,222 @@ Text HLabel 9000 2800 2    50   Input ~ 0
 I2C_SDA
 Text HLabel 9000 2900 2    50   Input ~ 0
 I2C_SCK
+NoConn ~ 4700 3600
+NoConn ~ 4700 3500
+NoConn ~ 4700 4300
+NoConn ~ 4700 4400
+NoConn ~ 4700 4200
+NoConn ~ 4700 4100
+NoConn ~ 4700 4000
+NoConn ~ 4700 3900
+NoConn ~ 4700 4700
+NoConn ~ 4700 4800
+NoConn ~ 4700 4900
+NoConn ~ 4700 5000
+NoConn ~ 3100 3600
+NoConn ~ 3100 3800
+NoConn ~ 3100 3900
+NoConn ~ 3100 4200
+NoConn ~ 3100 4300
+NoConn ~ 3100 4600
+NoConn ~ 3100 4700
+NoConn ~ 3100 4900
+NoConn ~ 3100 5000
+NoConn ~ 4700 5200
+NoConn ~ 4700 5300
+NoConn ~ 4700 5400
+NoConn ~ 4700 5500
+NoConn ~ 4700 5600
+$Comp
+L power:GND #PWR?
+U 1 1 5C850A0C
+P 3100 2400
+F 0 "#PWR?" H 3100 2150 50  0001 C CNN
+F 1 "GND" H 3105 2227 50  0000 C CNN
+F 2 "" H 3100 2400 50  0001 C CNN
+F 3 "" H 3100 2400 50  0001 C CNN
+	1    3100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2400 3100 2300
+Connection ~ 3100 2400
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C850F3E
+P 3100 2200
+F 0 "#PWR?" H 3100 2050 50  0001 C CNN
+F 1 "+3.3V" H 2950 2250 50  0000 C CNN
+F 2 "" H 3100 2200 50  0001 C CNN
+F 3 "" H 3100 2200 50  0001 C CNN
+	1    3100 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C850F83
+P 2700 2050
+F 0 "C?" H 2500 2150 50  0000 L CNN
+F 1 "0.1uF" H 2400 2050 50  0000 L CNN
+F 2 "" H 2738 1900 50  0001 C CNN
+F 3 "~" H 2700 2050 50  0001 C CNN
+	1    2700 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1800 2700 1900
+Wire Wire Line
+	2700 1800 3100 1800
+$Comp
+L power:GND #PWR?
+U 1 1 5C8520EA
+P 2700 2200
+F 0 "#PWR?" H 2700 1950 50  0001 C CNN
+F 1 "GND" H 2705 2027 50  0000 C CNN
+F 2 "" H 2700 2200 50  0001 C CNN
+F 3 "" H 2700 2200 50  0001 C CNN
+	1    2700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C852405
+P 5900 1550
+F 0 "C?" H 5700 1650 50  0000 L CNN
+F 1 "0.1uF" H 5600 1550 50  0000 L CNN
+F 2 "" H 5938 1400 50  0001 C CNN
+F 3 "~" H 5900 1550 50  0001 C CNN
+	1    5900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C852546
+P 6300 1550
+F 0 "C?" H 6100 1650 50  0000 L CNN
+F 1 "1uF" H 6000 1550 50  0000 L CNN
+F 2 "" H 6338 1400 50  0001 C CNN
+F 3 "~" H 6300 1550 50  0001 C CNN
+	1    6300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C85257A
+P 7100 1550
+F 0 "C?" H 6900 1650 50  0000 L CNN
+F 1 "1uF" H 6800 1550 50  0000 L CNN
+F 2 "" H 7138 1400 50  0001 C CNN
+F 3 "~" H 7100 1550 50  0001 C CNN
+	1    7100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:L L?
+U 1 1 5C8525D3
+P 6650 1400
+F 0 "L?" V 6840 1400 50  0000 C CNN
+F 1 "L" V 6749 1400 50  0000 C CNN
+F 2 "" H 6650 1400 50  0001 C CNN
+F 3 "~" H 6650 1400 50  0001 C CNN
+	1    6650 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C85264E
+P 7500 1550
+F 0 "C?" H 7300 1650 50  0000 L CNN
+F 1 "0.1uF" H 7200 1550 50  0000 L CNN
+F 2 "" H 7538 1400 50  0001 C CNN
+F 3 "~" H 7500 1550 50  0001 C CNN
+	1    7500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C85274F
+P 7900 1550
+F 0 "C?" H 7700 1650 50  0000 L CNN
+F 1 "0.1uF" H 7600 1550 50  0000 L CNN
+F 2 "" H 7938 1400 50  0001 C CNN
+F 3 "~" H 7900 1550 50  0001 C CNN
+	1    7900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 5C852787
+P 8300 1550
+F 0 "C?" H 8100 1650 50  0000 L CNN
+F 1 "180pF" H 8000 1550 50  0000 L CNN
+F 2 "" H 8338 1400 50  0001 C CNN
+F 3 "~" H 8300 1550 50  0001 C CNN
+	1    8300 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1400 7900 1400
+Connection ~ 7100 1400
+Wire Wire Line
+	7100 1400 6800 1400
+Connection ~ 7500 1400
+Wire Wire Line
+	7500 1400 7100 1400
+Connection ~ 7900 1400
+Wire Wire Line
+	7900 1400 7500 1400
+Wire Wire Line
+	6500 1400 6300 1400
+Connection ~ 6300 1400
+Wire Wire Line
+	6300 1400 5900 1400
+Wire Wire Line
+	5900 1700 6300 1700
+Connection ~ 6300 1700
+Wire Wire Line
+	6300 1700 7100 1700
+Connection ~ 7100 1700
+Wire Wire Line
+	7100 1700 7500 1700
+Connection ~ 7500 1700
+Wire Wire Line
+	7500 1700 7900 1700
+Connection ~ 7900 1700
+Wire Wire Line
+	7900 1700 8300 1700
+Wire Wire Line
+	5900 1400 5600 1400
+Connection ~ 5900 1400
+Wire Wire Line
+	8300 1400 8500 1400
+Connection ~ 8300 1400
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C855A60
+P 5600 1400
+F 0 "#PWR?" H 5600 1250 50  0001 C CNN
+F 1 "+3.3V" H 5615 1573 50  0000 C CNN
+F 2 "" H 5600 1400 50  0001 C CNN
+F 3 "" H 5600 1400 50  0001 C CNN
+	1    5600 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 1400 2    60   Input ~ 0
+VDDA
+NoConn ~ 4700 2500
+Text Label 3100 6300 2    50   ~ 0
+EN_Pi1_Power
+Text Label 4700 1900 0    50   ~ 0
+ADC_V_MPPT
+NoConn ~ 3100 6200
+NoConn ~ 4700 6700
+NoConn ~ 4700 6600
+NoConn ~ 4700 6000
+NoConn ~ 4700 6100
+NoConn ~ 3100 6600
+NoConn ~ 3100 6400
+Text Label 3100 6500 2    50   ~ 0
+O_SwitchAccess_Pi
+NoConn ~ 4700 3000
 $EndSCHEMATC
