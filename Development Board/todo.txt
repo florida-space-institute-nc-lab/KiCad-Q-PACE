@@ -1,0 +1,16 @@
+- finish high-level schematic
+- finish low-level schematic
+- pick component values
+- BOM
+- select footprints
+- create footprints
+- correct pinouts
+- organize layout
+- fix net list
+- reduce unnecessary components
+- add design rules
+- connect traces
+- fix schematic
+- add test points
+- add silk screen
+- update readme.md

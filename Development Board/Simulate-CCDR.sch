@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 12
+Sheet 2 13
 Title ""
 Date ""
 Rev ""
@@ -356,4 +356,131 @@ Wire Wire Line
 	7750 3650 8450 3650
 Text Notes 5100 3900 0    50   ~ 0
 determine where the ~IRQ, SDA, SCL connect to the RPi at.
+$Comp
+L Transistor_FET:BSS138 Q?
+U 1 1 5C96F9A5
+P 4200 5300
+F 0 "Q?" H 4405 5346 50  0000 L CNN
+F 1 "BSS138" H 4405 5255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4400 5225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 4200 5300 50  0001 L CNN
+	1    4200 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Q_PMOS_GDSD Q?
+U 1 1 5C9700AA
+P 4300 4600
+F 0 "Q?" V 4725 4600 50  0000 C CNN
+F 1 "Q_PMOS_GDSD" V 4634 4600 50  0000 C CNN
+F 2 "" H 4500 4700 50  0001 C CNN
+F 3 "~" H 4300 4600 50  0001 C CNN
+	1    4300 4600
+	0    1    -1   0   
+$EndComp
+$Comp
+L device:R R?
+U 1 1 5C9726D0
+P 3800 5450
+F 0 "R?" H 3870 5496 50  0000 L CNN
+F 1 "R" H 3870 5405 50  0000 L CNN
+F 2 "" V 3730 5450 50  0001 C CNN
+F 3 "~" H 3800 5450 50  0001 C CNN
+	1    3800 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C97274E
+P 4300 5600
+F 0 "#PWR?" H 4300 5350 50  0001 C CNN
+F 1 "GND" H 4300 5450 50  0000 C CNN
+F 2 "" H 4300 5600 50  0000 C CNN
+F 3 "" H 4300 5600 50  0000 C CNN
+	1    4300 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 5500 4300 5600
+Wire Wire Line
+	4300 5600 3800 5600
+Connection ~ 4300 5600
+Wire Wire Line
+	3800 5300 4000 5300
+$Comp
+L device:R R?
+U 1 1 5C974A04
+P 3900 4650
+F 0 "R?" H 3970 4696 50  0000 L CNN
+F 1 "R" H 3970 4605 50  0000 L CNN
+F 2 "" V 3830 4650 50  0001 C CNN
+F 3 "~" H 3900 4650 50  0001 C CNN
+	1    3900 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4500 4100 4500
+Wire Wire Line
+	3900 4800 3900 4900
+Wire Wire Line
+	3900 4900 4300 4900
+Wire Wire Line
+	4300 4900 4300 4800
+Wire Wire Line
+	4300 5100 4300 4900
+Connection ~ 4300 4900
+Wire Wire Line
+	4500 4400 4700 4400
+Wire Wire Line
+	4700 4400 4700 4500
+Wire Wire Line
+	4700 4500 4500 4500
+Wire Wire Line
+	4700 4500 4900 4500
+Connection ~ 4700 4500
+Wire Wire Line
+	3900 4500 3500 4500
+Connection ~ 3900 4500
+$Comp
+L power:+5V #PWR?
+U 1 1 5C97B93E
+P 3500 4500
+F 0 "#PWR?" H 3500 4350 50  0001 C CNN
+F 1 "+5V" H 3515 4673 50  0000 C CNN
+F 2 "" H 3500 4500 50  0001 C CNN
+F 3 "" H 3500 4500 50  0001 C CNN
+	1    3500 4500
+	1    0    0    -1  
+$EndComp
+Text Label 4900 4500 0    60   ~ 0
+P5V_HAT
+Wire Wire Line
+	3800 5300 3400 5300
+Connection ~ 3800 5300
+Text HLabel 3400 5300 0    50   Input ~ 0
+EN_PiPwr
+$Comp
+L power:GND #PWR?
+U 1 1 5C99F5E0
+P 2050 3600
+F 0 "#PWR?" H 2050 3350 50  0001 C CNN
+F 1 "GND" H 2050 3450 50  0000 C CNN
+F 2 "" H 2050 3600 50  0000 C CNN
+F 3 "" H 2050 3600 50  0000 C CNN
+	1    2050 3600
+	1    0    0    -1  
+$EndComp
+Connection ~ 2050 3600
+Text Label 2050 1800 2    50   ~ 0
+Pi_I2C_SDA
+Text Label 2050 1900 2    50   ~ 0
+Pi_I2C_SCL
+Text Label 5900 3600 0    50   ~ 0
+Pi_I2C_SCL
+Text Label 5900 3700 0    50   ~ 0
+Pi_I2C_SDA
+Text Label 5900 3400 0    50   ~ 0
+Pi_I2C_~IRQ
+Text Label 3250 3400 0    50   ~ 0
+Pi_I2C_~IRQ
 $EndSCHEMATC
