@@ -557,8 +557,6 @@ Text Label 9000 4950 2    50   ~ 0
 EN_Pi1_Power
 Text HLabel 9000 4950 2    50   Input ~ 0
 EN_PiPwr
-Text Notes 800  5250 0    50   ~ 0
-Use the "Avionics Stack Connector" to attach \nto the engineering model to test functionality
 $Comp
 L power:GND #PWR0112
 U 1 1 5CD062F7

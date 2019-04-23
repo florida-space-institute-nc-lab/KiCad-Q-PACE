@@ -401,17 +401,6 @@ Wire Wire Line
 	3100 3700 3100 3550
 Connection ~ 3100 3550
 $Comp
-L Connector_Generic:Conn_01x03 J12
-U 1 1 5CBED299
-P 8650 6000
-F 0 "J12" H 8650 6200 50  0000 C CNN
-F 1 "USB-Serial" H 8600 5750 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 8650 6000 50  0001 C CNN
-F 3 "~" H 8650 6000 50  0001 C CNN
-	1    8650 6000
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:D_Schottky D1
 U 1 1 5CC0DDE4
 P 1350 3550
@@ -540,16 +529,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0121
 U 1 1 5CC79600
-P 9050 6100
-F 0 "#PWR0121" H 9050 5850 50  0001 C CNN
-F 1 "GND" H 9055 5927 50  0000 C CNN
-F 2 "" H 9050 6100 50  0001 C CNN
-F 3 "" H 9050 6100 50  0001 C CNN
-	1    9050 6100
-	1    0    0    -1  
+P 8850 5800
+F 0 "#PWR0121" H 8850 5550 50  0001 C CNN
+F 1 "GND" H 8855 5627 50  0000 C CNN
+F 2 "" H 8850 5800 50  0001 C CNN
+F 3 "" H 8850 5800 50  0001 C CNN
+	1    8850 5800
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9050 6100 8850 6100
 $Comp
 L Connector_Generic:Conn_01x02 J?
 U 1 1 5CC83672
@@ -844,4 +831,26 @@ $EndComp
 Connection ~ 2550 5600
 Wire Wire Line
 	2550 5600 2700 5600
+$Comp
+L QPACE-DevelopmentBoard-rescue:Conn_01x04-conn J?
+U 1 1 5CD4F3FF
+P 8650 5800
+F 0 "J?" H 8729 5792 50  0000 L CNN
+F 1 "RPi_COMPort" H 8729 5701 50  0000 L CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04_Pitch2.54mm" H 8650 5800 50  0001 C CNN
+F 3 "~" H 8650 5800 50  0001 C CNN
+	1    8650 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CD53BAC
+P 8850 5700
+F 0 "#PWR?" H 8850 5550 50  0001 C CNN
+F 1 "+5V" H 8865 5873 50  0000 C CNN
+F 2 "" H 8850 5700 50  0001 C CNN
+F 3 "" H 8850 5700 50  0001 C CNN
+	1    8850 5700
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
