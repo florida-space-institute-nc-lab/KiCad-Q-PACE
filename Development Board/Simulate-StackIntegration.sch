@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 11 13
+Sheet 11 9
 Title ""
 Date ""
 Rev ""
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L conn:Conn_02x20_Odd_Even J?
+L QPACE-DevelopmentBoard-rescue:Conn_02x20_Odd_Even-conn J?
 U 1 1 5C88F6AB
 P 3700 4500
 F 0 "J?" H 3750 5617 50  0000 C CNN
@@ -116,7 +116,7 @@ NoConn ~ 4000 5300
 Text Label 4000 3600 0    50   ~ 0
 EN_Pi_Mux
 $Comp
-L conn:Conn_02x12_Odd_Even J?
+L QPACE-DevelopmentBoard-rescue:Conn_02x12_Odd_Even-conn J?
 U 1 1 5C88F6E5
 P 5800 4550
 F 0 "J?" H 5850 5267 50  0000 C CNN

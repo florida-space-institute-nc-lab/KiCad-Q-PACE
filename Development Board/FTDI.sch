@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 13
+Sheet 8 13
 Title ""
 Date ""
 Rev ""
@@ -77,7 +77,7 @@ $EndComp
 Wire Wire Line
 	6600 2900 6600 3100
 $Comp
-L device:C C?
+L QPACE-DevelopmentBoard-rescue:C-device C?
 U 1 1 5CB51E74
 P 5400 4450
 AR Path="/5C84505A/5CB51E74" Ref="C?"  Part="1" 
@@ -115,7 +115,7 @@ Wire Wire Line
 	6500 3100 6600 3100
 NoConn ~ 7200 3700
 $Comp
-L device:C C?
+L QPACE-DevelopmentBoard-rescue:C-device C?
 U 1 1 5CB5201F
 P 6350 3250
 AR Path="/5C84505A/5CB5201F" Ref="C?"  Part="1" 

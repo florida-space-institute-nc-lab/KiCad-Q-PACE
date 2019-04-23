@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 13
+Sheet 13 9
 Title ""
 Date ""
 Rev ""
@@ -41,7 +41,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 3400 5200 50  000
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C946C7C
 P 3500 3150
 AR Path="/5C946C7C" Ref="R?"  Part="1" 
@@ -54,7 +54,7 @@ F 3 "~" H 3500 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C946C83
 P 3500 4850
 AR Path="/5C946C83" Ref="R?"  Part="1" 
@@ -149,7 +149,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 5150 5200 50  000
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C94C446
 P 5250 3200
 AR Path="/5C94C446" Ref="R?"  Part="1" 
@@ -162,7 +162,7 @@ F 3 "~" H 5250 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C94C44C
 P 5250 4850
 AR Path="/5C94C44C" Ref="R?"  Part="1" 
@@ -231,7 +231,7 @@ UART_RX_CCDR
 Text HLabel 4950 3550 0    50   Input ~ 0
 UART_TX_CCDR
 $Comp
-L device:LED D?
+L QPACE-DevelopmentBoard-rescue:LED-device D?
 U 1 1 5C94C7BC
 P 3500 2850
 F 0 "D?" V 3538 2733 50  0000 R CNN
@@ -242,7 +242,7 @@ F 3 "~" H 3500 2850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:LED D?
+L QPACE-DevelopmentBoard-rescue:LED-device D?
 U 1 1 5C94C852
 P 5250 2900
 F 0 "D?" V 5288 2783 50  0000 R CNN
@@ -253,7 +253,7 @@ F 3 "~" H 5250 2900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:LED D?
+L QPACE-DevelopmentBoard-rescue:LED-device D?
 U 1 1 5C94C8FE
 P 5250 4550
 F 0 "D?" V 5288 4433 50  0000 R CNN
@@ -264,7 +264,7 @@ F 3 "~" H 5250 4550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:LED D?
+L QPACE-DevelopmentBoard-rescue:LED-device D?
 U 1 1 5C94C952
 P 3500 4550
 F 0 "D?" V 3538 4433 50  0000 R CNN
@@ -288,7 +288,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 6700 3550 50  000
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C958B6F
 P 6800 3200
 AR Path="/5C958B6F" Ref="R?"  Part="1" 
@@ -329,7 +329,7 @@ $EndComp
 Text HLabel 6500 3550 0    50   Input ~ 0
 3V3_PGood
 $Comp
-L device:LED D?
+L QPACE-DevelopmentBoard-rescue:LED-device D?
 U 1 1 5C958B82
 P 6800 2900
 F 0 "D?" V 6838 2783 50  0000 R CNN
@@ -353,7 +353,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 6700 5150 50  000
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R?
+L QPACE-DevelopmentBoard-rescue:R-device R?
 U 1 1 5C958C4D
 P 6800 4800
 AR Path="/5C958C4D" Ref="R?"  Part="1" 
@@ -394,7 +394,7 @@ $EndComp
 Text HLabel 6500 5150 0    50   Input ~ 0
 5V_PGood
 $Comp
-L device:LED D?
+L QPACE-DevelopmentBoard-rescue:LED-device D?
 U 1 1 5C958C60
 P 6800 4500
 F 0 "D?" V 6838 4383 50  0000 R CNN
