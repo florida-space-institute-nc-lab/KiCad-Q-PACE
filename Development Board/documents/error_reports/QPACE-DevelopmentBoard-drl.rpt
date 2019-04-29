@@ -1,0 +1,28 @@
+Drill report for C:\Users\PICCARD\Documents\Github\NC Lab\KiCad-Q-PACE\Development Board\QPACE-DevelopmentBoard.kicad_pcb
+Created on 4/29/2019 5:39:03 PM
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  In1.Cu                    in1
+    L3 :  In2.Cu                    in2
+    L4 :  B.Cu                      back
+
+
+Drill file 'QPACE-DevelopmentBoard-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.20mm  0.008"  (101 holes)
+    T2  0.80mm  0.031"  (2 holes)
+    T3  1.00mm  0.039"  (86 holes)
+    T4  1.20mm  0.047"  (3 holes)
+
+    Total plated holes count 192
+
+
+Drill file 'QPACE-DevelopmentBoard-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  2.75mm  0.108"  (4 holes)
+
+    Total unplated holes count 4
