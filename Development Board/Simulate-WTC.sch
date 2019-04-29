@@ -5,19 +5,15 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Title "Q-PACE Development Board Raspberry Pi Hat"
+Date "2019-04-29"
+Rev "R0"
+Comp "FSI"
+Comment1 "created by Theodore Cox (TCC)"
+Comment2 "The simulated boards include; the WTC (STM32), CCDR (R Pi) and RF (EnduroSat)"
+Comment3 "This should connect to a Raspberry Pi with other necessary connections"
+Comment4 "This device is to be used to develop code for Q-PACE"
 $EndDescr
-Text GLabel 3500 1400 0    60   Input ~ 0
-3_3V_Rail
-Text GLabel 4200 1400 2    60   Input ~ 0
-VDDA
 $Comp
 L MCU_ST_STM32L1:STM32L151VETx U3
 U 1 1 5C84B2A6
@@ -58,10 +54,10 @@ Wire Wire Line
 Wire Wire Line
 	4100 7100 4100 7200
 $Comp
-L power:GND #PWR0134
+L power:GND #PWR042
 U 1 1 5C8987D0
 P 4100 7200
-F 0 "#PWR0134" H 4100 6950 50  0001 C CNN
+F 0 "#PWR042" H 4100 6950 50  0001 C CNN
 F 1 "GND" H 4105 7027 50  0000 C CNN
 F 2 "" H 4100 7200 50  0001 C CNN
 F 3 "" H 4100 7200 50  0001 C CNN
@@ -92,19 +88,16 @@ Wire Wire Line
 Wire Wire Line
 	3800 1400 3800 1250
 $Comp
-L power:+3.3V #PWR0135
+L power:+3.3V #PWR041
 U 1 1 5C8D6102
 P 3800 1250
-F 0 "#PWR0135" H 3800 1100 50  0001 C CNN
+F 0 "#PWR041" H 3800 1100 50  0001 C CNN
 F 1 "+3.3V" H 3815 1423 50  0000 C CNN
 F 2 "" H 3800 1250 50  0001 C CNN
 F 3 "" H 3800 1250 50  0001 C CNN
 	1    3800 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3500 1400 3700 1400
-Connection ~ 3700 1400
 Wire Wire Line
 	4200 1500 4200 1400
 NoConn ~ 3100 3500
@@ -122,9 +115,9 @@ NoConn ~ 4700 5900
 NoConn ~ 4700 5800
 NoConn ~ 4700 5700
 Text Label 4700 2000 0    50   ~ 0
-UART_TX_RF
+extra_UART_TX
 Text Label 4700 2100 0    50   ~ 0
-UART_RX_RF
+extra_UART_RX
 NoConn ~ 4700 2200
 NoConn ~ 4700 2300
 NoConn ~ 4700 2400
@@ -141,9 +134,9 @@ Text Label 4700 3700 0    50   ~ 0
 BOOT1
 Text Label 4700 3800 0    50   ~ 0
 SWD_SWO
-Text Label 4700 4600 0    50   ~ 0
-I2C_SCL
 Text Label 4700 4500 0    50   ~ 0
+I2C_SCL
+Text Label 4700 4600 0    50   ~ 0
 I2C_SDA
 Text Label 4700 6200 0    50   ~ 0
 UART_TX_2
@@ -189,10 +182,6 @@ NoConn ~ 3100 5800
 NoConn ~ 3100 5900
 Text Label 3100 6700 2    50   ~ 0
 IO_Pi1
-Text Label 3100 6100 2    50   ~ 0
-UART_RX
-Text Label 3100 6000 2    50   ~ 0
-UART_TX
 NoConn ~ 3100 4500
 NoConn ~ 3100 4400
 Text HLabel 7200 3200 2    50   Input ~ 0
@@ -211,10 +200,10 @@ Text HLabel 5300 2800 2    50   Input ~ 0
 CCDR_UART_RX
 Text HLabel 5300 2700 2    50   Input ~ 0
 CCDR_UART_TX
-Text HLabel 5050 4500 2    50   Input ~ 0
-I2C_SDA
 Text HLabel 5050 4600 2    50   Input ~ 0
-I2C_SCK
+I2C_SDA
+Text HLabel 5050 4500 2    50   Input ~ 0
+I2C_SCL
 NoConn ~ 4700 3600
 NoConn ~ 4700 3500
 NoConn ~ 4700 4300
@@ -242,24 +231,21 @@ NoConn ~ 4700 5400
 NoConn ~ 4700 5500
 NoConn ~ 4700 5600
 $Comp
-L power:GND #PWR0138
+L power:GND #PWR040
 U 1 1 5C850A0C
 P 3100 2400
-F 0 "#PWR0138" H 3100 2150 50  0001 C CNN
+F 0 "#PWR040" H 3100 2150 50  0001 C CNN
 F 1 "GND" H 3105 2227 50  0000 C CNN
 F 2 "" H 3100 2400 50  0001 C CNN
 F 3 "" H 3100 2400 50  0001 C CNN
 	1    3100 2400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3100 2400 3100 2300
-Connection ~ 3100 2400
 $Comp
-L power:+3.3V #PWR0139
+L power:+3.3V #PWR039
 U 1 1 5C850F3E
 P 3100 2200
-F 0 "#PWR0139" H 3100 2050 50  0001 C CNN
+F 0 "#PWR039" H 3100 2050 50  0001 C CNN
 F 1 "+3.3V" H 2950 2250 50  0000 C CNN
 F 2 "" H 3100 2200 50  0001 C CNN
 F 3 "" H 3100 2200 50  0001 C CNN
@@ -282,10 +268,10 @@ Wire Wire Line
 Wire Wire Line
 	2700 1800 3100 1800
 $Comp
-L power:GND #PWR0140
+L power:GND #PWR038
 U 1 1 5C8520EA
 P 2700 2200
-F 0 "#PWR0140" H 2700 1950 50  0001 C CNN
+F 0 "#PWR038" H 2700 1950 50  0001 C CNN
 F 1 "GND" H 2705 2027 50  0000 C CNN
 F 2 "" H 2700 2200 50  0001 C CNN
 F 3 "" H 2700 2200 50  0001 C CNN
@@ -295,149 +281,133 @@ $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:C-device C7
 U 1 1 5C852405
-P 5900 1550
-F 0 "C7" H 5700 1650 50  0000 L CNN
-F 1 "0.1uF" H 5600 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5938 1400 50  0001 C CNN
-F 3 "~" H 5900 1550 50  0001 C CNN
-	1    5900 1550
-	1    0    0    -1  
+P 7850 1550
+F 0 "C7" H 7650 1650 50  0000 L CNN
+F 1 "0.1uF" H 7550 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7888 1400 50  0001 C CNN
+F 3 "~" H 7850 1550 50  0001 C CNN
+	1    7850 1550
+	-1   0    0    -1  
 $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:C-device C8
 U 1 1 5C852546
-P 6300 1550
-F 0 "C8" H 6100 1650 50  0000 L CNN
-F 1 "1uF" H 6000 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 6338 1400 50  0001 C CNN
-F 3 "~" H 6300 1550 50  0001 C CNN
-	1    6300 1550
-	1    0    0    -1  
+P 7450 1550
+F 0 "C8" H 7250 1650 50  0000 L CNN
+F 1 "1uF" H 7150 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7488 1400 50  0001 C CNN
+F 3 "~" H 7450 1550 50  0001 C CNN
+	1    7450 1550
+	-1   0    0    -1  
 $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:C-device C9
 U 1 1 5C85257A
-P 7100 1550
-F 0 "C9" H 6900 1650 50  0000 L CNN
-F 1 "1uF" H 6800 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7138 1400 50  0001 C CNN
-F 3 "~" H 7100 1550 50  0001 C CNN
-	1    7100 1550
-	1    0    0    -1  
+P 6650 1550
+F 0 "C9" H 6450 1650 50  0000 L CNN
+F 1 "1uF" H 6350 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6688 1400 50  0001 C CNN
+F 3 "~" H 6650 1550 50  0001 C CNN
+	1    6650 1550
+	-1   0    0    -1  
 $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:L-device L1
 U 1 1 5C8525D3
-P 6650 1400
-F 0 "L1" V 6840 1400 50  0000 C CNN
-F 1 "L" V 6749 1400 50  0000 C CNN
-F 2 "Inductors_SMD:L_0603" H 6650 1400 50  0001 C CNN
-F 3 "~" H 6650 1400 50  0001 C CNN
-	1    6650 1400
-	0    -1   -1   0   
+P 7100 1400
+F 0 "L1" V 7290 1400 50  0000 C CNN
+F 1 "L" V 7199 1400 50  0000 C CNN
+F 2 "Inductors_SMD:L_0603" H 7100 1400 50  0001 C CNN
+F 3 "~" H 7100 1400 50  0001 C CNN
+	1    7100 1400
+	0    1    -1   0   
 $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:C-device C10
 U 1 1 5C85264E
-P 7500 1550
-F 0 "C10" H 7300 1650 50  0000 L CNN
-F 1 "0.1uF" H 7200 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7538 1400 50  0001 C CNN
-F 3 "~" H 7500 1550 50  0001 C CNN
-	1    7500 1550
-	1    0    0    -1  
+P 6250 1550
+F 0 "C10" H 6050 1650 50  0000 L CNN
+F 1 "0.1uF" H 5950 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6288 1400 50  0001 C CNN
+F 3 "~" H 6250 1550 50  0001 C CNN
+	1    6250 1550
+	-1   0    0    -1  
 $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:C-device C11
 U 1 1 5C85274F
-P 7900 1550
-F 0 "C11" H 7700 1650 50  0000 L CNN
-F 1 "0.1uF" H 7600 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7938 1400 50  0001 C CNN
-F 3 "~" H 7900 1550 50  0001 C CNN
-	1    7900 1550
-	1    0    0    -1  
+P 5850 1550
+F 0 "C11" H 5650 1650 50  0000 L CNN
+F 1 "0.1uF" H 5550 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5888 1400 50  0001 C CNN
+F 3 "~" H 5850 1550 50  0001 C CNN
+	1    5850 1550
+	-1   0    0    -1  
 $EndComp
 $Comp
 L QPACE-DevelopmentBoard-rescue:C-device C12
 U 1 1 5C852787
-P 8300 1550
-F 0 "C12" H 8100 1650 50  0000 L CNN
-F 1 "180pF" H 8000 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 8338 1400 50  0001 C CNN
-F 3 "~" H 8300 1550 50  0001 C CNN
-	1    8300 1550
-	1    0    0    -1  
+P 5450 1550
+F 0 "C12" H 5250 1650 50  0000 L CNN
+F 1 "180pF" H 5150 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5488 1400 50  0001 C CNN
+F 3 "~" H 5450 1550 50  0001 C CNN
+	1    5450 1550
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8300 1400 7900 1400
-Connection ~ 7100 1400
+	5450 1400 5850 1400
+Connection ~ 6650 1400
 Wire Wire Line
-	7100 1400 6800 1400
-Connection ~ 7500 1400
+	6650 1400 6950 1400
+Connection ~ 6250 1400
 Wire Wire Line
-	7500 1400 7100 1400
-Connection ~ 7900 1400
+	6250 1400 6650 1400
+Connection ~ 5850 1400
 Wire Wire Line
-	7900 1400 7500 1400
+	5850 1400 6250 1400
 Wire Wire Line
-	6500 1400 6300 1400
-Connection ~ 6300 1400
+	7250 1400 7450 1400
+Connection ~ 7450 1400
 Wire Wire Line
-	6300 1400 5900 1400
+	7450 1400 7850 1400
 Wire Wire Line
-	5900 1700 6300 1700
-Connection ~ 6300 1700
+	7850 1700 7450 1700
+Connection ~ 7450 1700
 Wire Wire Line
-	6300 1700 7100 1700
-Connection ~ 7100 1700
+	7450 1700 6650 1700
+Connection ~ 6650 1700
 Wire Wire Line
-	7100 1700 7500 1700
-Connection ~ 7500 1700
+	6650 1700 6250 1700
+Connection ~ 6250 1700
 Wire Wire Line
-	7500 1700 7900 1700
-Connection ~ 7900 1700
+	6250 1700 5850 1700
+Connection ~ 5850 1700
 Wire Wire Line
-	7900 1700 8300 1700
+	5850 1700 5450 1700
 Wire Wire Line
-	5900 1400 5600 1400
-Connection ~ 5900 1400
-Wire Wire Line
-	8300 1400 8500 1400
-Connection ~ 8300 1400
+	7850 1400 8150 1400
+Connection ~ 7850 1400
+Connection ~ 5450 1400
 $Comp
-L power:+3.3V #PWR0141
+L power:+3.3V #PWR043
 U 1 1 5C855A60
-P 5600 1400
-F 0 "#PWR0141" H 5600 1250 50  0001 C CNN
-F 1 "+3.3V" H 5615 1573 50  0000 C CNN
-F 2 "" H 5600 1400 50  0001 C CNN
-F 3 "" H 5600 1400 50  0001 C CNN
-	1    5600 1400
-	1    0    0    -1  
+P 8150 1400
+F 0 "#PWR043" H 8150 1250 50  0001 C CNN
+F 1 "+3.3V" H 8165 1573 50  0000 C CNN
+F 2 "" H 8150 1400 50  0001 C CNN
+F 3 "" H 8150 1400 50  0001 C CNN
+	1    8150 1400
+	-1   0    0    -1  
 $EndComp
-Text GLabel 8500 1400 2    60   Input ~ 0
-VDDA
 NoConn ~ 4700 2500
-Text Label 3100 6300 2    50   ~ 0
+Text Label 2600 6300 0    50   ~ 0
 EN_Pi1_Power
-Text Label 4700 1900 0    50   ~ 0
-ADC_V_MPPT
 NoConn ~ 3100 6200
 NoConn ~ 4700 6700
 NoConn ~ 4700 6600
 Text Notes 700  4900 0    50   ~ 0
 Use the "Avionics Stack Connector" to attach \nto the engineering model to test functionality
-Text Label 4700 6100 0    50   ~ 0
-EN_12V-2
-Text Label 4700 6000 0    50   ~ 0
-EN_12V-1
-Text Label 4700 3000 0    50   ~ 0
-EN_5V-1
-Text Label 3100 3300 2    50   ~ 0
-EN_5V-2
-Text Label 3100 6600 2    50   ~ 0
-IO_Pi2
 $Comp
 L QPACE-DevelopmentBoard-rescue:R-device R12
 U 1 1 5CBCDA10
@@ -464,8 +434,8 @@ $Comp
 L QPACE-DevelopmentBoard-rescue:R-device R13
 U 1 1 5CBD13DF
 P 6900 2850
-F 0 "R13" H 6970 2896 50  0000 L CNN
-F 1 "10k" H 6950 2700 50  0000 L CNN
+F 0 "R13" H 6650 2950 50  0000 L CNN
+F 1 "4.99K" H 6600 2850 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805" V 6830 2850 50  0001 C CNN
 F 3 "~" H 6900 2850 50  0001 C CNN
 	1    6900 2850
@@ -476,7 +446,7 @@ L QPACE-DevelopmentBoard-rescue:R-device R14
 U 1 1 5CBD1431
 P 7100 2850
 F 0 "R14" H 7170 2896 50  0000 L CNN
-F 1 "10k" H 7150 2700 50  0000 L CNN
+F 1 "4.99K" H 7200 2800 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805" V 7030 2850 50  0001 C CNN
 F 3 "~" H 7100 2850 50  0001 C CNN
 	1    7100 2850
@@ -497,10 +467,10 @@ Connection ~ 7100 3200
 Wire Wire Line
 	7100 3200 7200 3200
 $Comp
-L power:+3.3V #PWR0144
+L power:+3.3V #PWR044
 U 1 1 5CBD5308
 P 6900 2600
-F 0 "#PWR0144" H 6900 2450 50  0001 C CNN
+F 0 "#PWR044" H 6900 2450 50  0001 C CNN
 F 1 "+3.3V" H 6915 2773 50  0000 C CNN
 F 2 "" H 6900 2600 50  0001 C CNN
 F 3 "" H 6900 2600 50  0001 C CNN
@@ -534,16 +504,16 @@ Wire Wire Line
 Wire Wire Line
 	4700 2100 5600 2100
 Wire Wire Line
-	5050 4500 4700 4500
+	5050 4600 4700 4600
 Wire Wire Line
-	4700 4600 5050 4600
+	4700 4500 5050 4500
 Text HLabel 1450 1350 0    50   Input ~ 0
 Vcc
 $Comp
-L power:+3.3V #PWR0146
+L power:+3.3V #PWR037
 U 1 1 5CC33C98
 P 1550 1350
-F 0 "#PWR0146" H 1550 1200 50  0001 C CNN
+F 0 "#PWR037" H 1550 1200 50  0001 C CNN
 F 1 "+3.3V" H 1565 1523 50  0000 C CNN
 F 2 "" H 1550 1350 50  0001 C CNN
 F 3 "" H 1550 1350 50  0001 C CNN
@@ -553,15 +523,15 @@ $EndComp
 Wire Wire Line
 	1550 1350 1450 1350
 NoConn ~ 3100 6400
-Text Label 9000 4950 2    50   ~ 0
+Text Label 1150 6450 0    50   ~ 0
 EN_Pi1_Power
-Text HLabel 9000 4950 2    50   Input ~ 0
+Text HLabel 1650 6450 2    50   Input ~ 0
 EN_PiPwr
 $Comp
-L power:GND #PWR0112
+L power:GND #PWR036
 U 1 1 5CD062F7
 P 1450 3350
-F 0 "#PWR0112" H 1450 3100 50  0001 C CNN
+F 0 "#PWR036" H 1450 3100 50  0001 C CNN
 F 1 "GND" H 1455 3177 50  0000 C CNN
 F 2 "" H 1450 3350 50  0001 C CNN
 F 3 "" H 1450 3350 50  0001 C CNN
@@ -577,22 +547,70 @@ Wire Wire Line
 Connection ~ 1450 3300
 Wire Wire Line
 	1450 3300 1450 2800
-Text Label 3100 6500 2    50   ~ 0
-EN_Pi_Mux
 Text HLabel 5600 2000 2    50   Input ~ 0
 extra_TX
 Text HLabel 5600 2100 2    50   Input ~ 0
 extra_RX
 $Comp
-L power:GND #PWR0137
+L power:GND #PWR045
 U 1 1 5CD2CA04
-P 7100 1700
-F 0 "#PWR0137" H 7100 1450 50  0001 C CNN
-F 1 "GND" H 7105 1527 50  0000 C CNN
-F 2 "" H 7100 1700 50  0001 C CNN
-F 3 "" H 7100 1700 50  0001 C CNN
-	1    7100 1700
-	1    0    0    -1  
+P 6650 1700
+F 0 "#PWR045" H 6650 1450 50  0001 C CNN
+F 1 "GND" H 6655 1527 50  0000 C CNN
+F 2 "" H 6650 1700 50  0001 C CNN
+F 3 "" H 6650 1700 50  0001 C CNN
+	1    6650 1700
+	-1   0    0    -1  
 $EndComp
 NoConn ~ 3100 5200
+Text HLabel 1650 6350 2    50   Input ~ 0
+PiHeartBeat
+Text Label 1200 6350 0    50   ~ 0
+PiHeartBeat
+Text Label 2750 6700 2    50   ~ 0
+PiHeartBeat
+Wire Wire Line
+	3100 6700 2750 6700
+NoConn ~ 4700 1900
+Wire Wire Line
+	3100 2300 3100 2200
+Connection ~ 3100 2200
+NoConn ~ 4700 3000
+NoConn ~ 4700 6000
+NoConn ~ 4700 6100
+NoConn ~ 3100 3100
+NoConn ~ 3100 3200
+NoConn ~ 3100 3300
+NoConn ~ 3100 6600
+NoConn ~ 3100 6500
+NoConn ~ 3100 6000
+NoConn ~ 3100 6100
+Text Label 4400 1400 2    50   ~ 0
+VDDA
+Text GLabel 3700 1400 0    50   Input ~ 0
+3_3V_Rail
+Wire Wire Line
+	4200 1400 4800 1400
+Wire Wire Line
+	3100 6300 2600 6300
+$Comp
+L power:VDDA #PWR0106
+U 1 1 5CCA09B8
+P 4800 1350
+F 0 "#PWR0106" H 4800 1200 50  0001 C CNN
+F 1 "VDDA" H 4817 1523 50  0000 C CNN
+F 2 "" H 4800 1350 50  0001 C CNN
+F 3 "" H 4800 1350 50  0001 C CNN
+	1    4800 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1350 4800 1400
+Connection ~ 4800 1400
+Wire Wire Line
+	4800 1400 5450 1400
+Wire Wire Line
+	1650 6450 1150 6450
+Wire Wire Line
+	1650 6350 1200 6350
 $EndSCHEMATC
